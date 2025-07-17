@@ -1640,7 +1640,7 @@
 .end method
 
 .method public gotoGallery()V
-    .locals 10
+    .locals 11
 
     .line 1
     invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->isActivityPaused()Z
@@ -1871,6 +1871,9 @@
     new-instance v5, Landroid/content/Intent;
 
     invoke-direct {v5, v6, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    const/high16 v10, 0x10000000 # FLAG_ACTIVITY_NEW_TASK
+    invoke-virtual {v5, v10}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 25
     :goto_0
