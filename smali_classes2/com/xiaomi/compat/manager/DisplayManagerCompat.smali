@@ -17,11 +17,6 @@
     .locals 0
 
     .line 1
-    :try_start_0
-    invoke-virtual {p0, p1}, Landroid/hardware/display/DisplayManager;->setTemporaryAutoBrightnessAdjustment(F)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :catchall_0
     return-void
 .end method
